@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+}
+body {
+  background: green;
+  border: 19px solid maroon;
+  text-stroke: 4px navy;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.testing {
+  width: 57.14285714%;
+}
+div {
+  background-color: tomato;
+  -webkit-transform: rotateY(16deg);
+          transform: rotateY(16deg);
+}

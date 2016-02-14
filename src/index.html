@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myCalculator">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculator</title>
+  <link href="css/calculator.css" rel="stylesheet" type="text/css"></link>
+  <script src="script/calculator.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="myCalculator" ng-controller="CalculatorController">
+    <main>
+      <section>
+        <div>
+          <h4>Incandescent2</h4>
+          <p>{{inc_wattage}}</p>
+          <p>{{inc_cost}}</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h4>Halogen</h4>
+          <p>{{hal_wattage}}</p>
+          <p>{{hal_cost}}</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h4>CFLs</h4>
+          <p>{{cfl_wattage}}</p>
+          <p>{{cfl_cost}}</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h4>LED</h4>
+          <p>{{led_wattage}}</p>
+          <p>{{led_cost}}</p>
+        </div>
+      </section>
+    </main>
+    <form>
+      <div>
+        <h4>Lumens</h4>
+        <p>Brightness <br>of bulb</p>
+        <select ng-change="calculate()" ng-model="current_lumens" ng-options="o as o for o in lumen_options" name="" id="">
+        </select>
+      </div>
+      <div>
+        <h4>kWh</h4>
+        <p>Kilowatt-<br>hour cost</p>
+        <input ng-change="calculate()" type="number" ng-model="current_cost" value="{{current_cost}}"> cents
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Usage <br>per day</p>
+        <input ng-change="calculate()" type="number" ng-model="current_hours" value="{{current_hours}}">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+
+#myCalculator {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  max-width: 800px;
+}
+main {
+  background: #444;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: .8em;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+  }
+  p {
+    margin: 0;
+    &:nth-of-type(1) {
+      font-size: 1.5em;
+      font-weight: 700;
+      &:after {
+        content: 'w';
+      }
+    }
+    &:nth-of-type(2) {
+      font-size: 1em;
+      font-weight: 300;
+
+      &:before {
+        content: '$';
+      }
+      &:after {
+        content: 'per year';
+        color: rgba(255,255,255,.5);
+        padding-left: 4px;
+      }
+    }
+  }
+}
+section {
+  width: 25%;
+  float:left;
+  text-align: center;
+  padding-top: 110px;
+  color: #fff;
+  background: ~"center 5px / 63px 100px no-repeat";
+  div {
+    padding: 5px 0;
+    background: rgba(0,0,0,.15);
+  }
+  &:nth-child(1) {
+    background-color: #ba2d2d;
+    background-image: url(../images/bulb_inc.svg);
+  }
+  &:nth-child(2) {
+    background-color: #de6615;//
+    background-image: url(../images/bulb_hal.svg);
+  }
+  &:nth-child(3) {
+    background-color: #efc20f;//
+    background-image: url(../images/bulb_cfl.svg);
+  }
+  &:nth-child(4) {
+    background-color: #36b23c;
+    background-image: url(../images/bulb_led.svg);
+  }
+}
+form {
+  background: #000;
+  margin: 0;
+  padding: 10px 0;
+  br {
+    display: none;
+  }
+  > div {
+    color: #fff;
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding: 10px 0 5px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  h4 {
+    color: #aaa;
+    margin: 0 0 -5px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  p {
+    color: #888;
+    margin: 0 0 6px 0;
+    font-size: .9em;
+  }
+  input[type=number] {
+    width: 50px;
+    text-align: left;
+    font-size: 1em;
+  }
+  select {
+    font-size: 1em;
+    appearance: none;
+    background: ~"url(../images/icons_arrows.svg) right 6px / 30px 20px no-repeat #fff";
+    padding: 3px 30px 3px 5px;
+    &:-ms-expand {
+      display: none; //
+    }
+  }
+}
+@media screen and (max-width:500px) {
+  #myCalculator {
+    font-size: 15px;
+  }
+  section {
+    background-size: 45px 71px;
+    padding-top: 80px;
+  }
+  main {
+    h4 {
+      margin: 0;
+      font-size: .75em;
+      letter-spacing: 0;
+    }
+    p {
+      &:nth-of-type(1) {
+        font-size: 1.1em; //
+      }
+      &:nth-of-type(2) {
+        font-size: 1em;
+        &:after {
+          display: block;
+          margin-top: -10px;
+          color: #fff;
+        }
+      }
+    }
+    form {
+      h4 {
+        font-size: 1.1em;
+        margin: 0;
+      }
+      p {
+        font-size: .8em;
+        line-height: 14px;
+      }
+      br {
+        display: inline;
+      }
+    }
+    input[type=number] {
+      width: 30px;
+      font-size: .8em;
+    }
+    select {
+      font-size: .8em;
+    }
+  }
+}
